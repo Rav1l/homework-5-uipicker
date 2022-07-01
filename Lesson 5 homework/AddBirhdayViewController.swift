@@ -18,6 +18,10 @@ class AddBirhdayViewController: UIViewController {
     var currentDatePiker = UIDatePicker()
     var agePicker = UIPickerView()
     var genderPicker = UIPickerView()
+
+    deinit {
+        print("\(self): I'm dead.")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +86,10 @@ class AddBirhdayViewController: UIViewController {
         view.endEditing(true)
     }
 
-    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+
     func getDateFromPicker() {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
