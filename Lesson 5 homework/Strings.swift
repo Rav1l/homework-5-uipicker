@@ -6,6 +6,12 @@
 //
 
 enum Strings: String {
-
-    case login = "Войти"
+    
+    case titelLabel = "Напоминание о дне рождении"
+    case loginLabel = "Войти"
+    case emailLabel = "Email"
+    case emailTextField = "Введите email"
+    case passwordLabel = "Пароль"
+    case passowrdTextField = "Введите пароль"
+    case faceidLabel = "Вход по Face ID"
 }
