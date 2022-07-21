@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC8EECE2889E7BD002D671D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8EECD2889E7BD002D671D /* LoginButton.swift */; };
 		3FEA8F79286E29340088BCD0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA8F78286E29340088BCD0 /* Strings.swift */; };
 		3FEA8F7B286E2B4A0088BCD0 /* UIView+SafeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA8F7A286E2B4A0088BCD0 /* UIView+SafeAnchors.swift */; };
 		F1483BBB2829492800F373D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1483BBA2829492800F373D8 /* SecondViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FC8EECD2889E7BD002D671D /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		3FEA8F78286E29340088BCD0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3FEA8F7A286E2B4A0088BCD0 /* UIView+SafeAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeAnchors.swift"; sourceTree = "<group>"; };
 		F1483BBA2829492800F373D8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				F1BE7CA628293C470066F89C /* AppDelegate.swift */,
 				F1BE7CA828293C470066F89C /* SceneDelegate.swift */,
 				F1BE7CAA28293C470066F89C /* ViewController.swift */,
+				3FC8EECD2889E7BD002D671D /* LoginButton.swift */,
 				3FEA8F7A286E2B4A0088BCD0 /* UIView+SafeAnchors.swift */,
 				3FEA8F78286E29340088BCD0 /* Strings.swift */,
 				F1483BBA2829492800F373D8 /* SecondViewController.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1483BBD282D494A00F373D8 /* AddBirhdayViewController.swift in Sources */,
+				3FC8EECE2889E7BD002D671D /* LoginButton.swift in Sources */,
 				3FEA8F7B286E2B4A0088BCD0 /* UIView+SafeAnchors.swift in Sources */,
 				F1483BBB2829492800F373D8 /* SecondViewController.swift in Sources */,
 				F1BE7CAB28293C470066F89C /* ViewController.swift in Sources */,

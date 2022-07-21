@@ -13,7 +13,6 @@ class ViewController: UIViewController {
 
     private lazy var titelLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 26)
         label.text = Strings.titelLabel.rawValue
         label.textAlignment = .center
@@ -24,7 +23,6 @@ class ViewController: UIViewController {
 
     private lazy var loginLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         label.text = Strings.loginLabel.rawValue
         label.sizeToFit()
@@ -33,7 +31,6 @@ class ViewController: UIViewController {
 
     private lazy var emailLabel: UILabel = {
         let label  = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = Strings.emailLabel.rawValue
         label.sizeToFit()
@@ -42,7 +39,6 @@ class ViewController: UIViewController {
     
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 20)
         textField.keyboardType = .emailAddress
         textField.placeholder = Strings.emailTextField.rawValue
@@ -52,7 +48,6 @@ class ViewController: UIViewController {
     
     private lazy var passwordLabel: UILabel = {
         let label  = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = Strings.passwordLabel.rawValue
         label.sizeToFit()
@@ -61,7 +56,6 @@ class ViewController: UIViewController {
     
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 20)
         textField.placeholder = Strings.passowrdTextField.rawValue
         textField.borderStyle = .roundedRect
@@ -71,13 +65,18 @@ class ViewController: UIViewController {
     
     private lazy var faceidLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = Strings.faceidLabel.rawValue
         label.textAlignment = .center
         return label
     }()
+
     // MARK: View Life Cycle
+
+    override func loadView() {
+        super.loadView()
+        // здесь можно переопределить вьюху контроллера
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,22 +88,42 @@ class ViewController: UIViewController {
     // MARK: Methods
 
     //кнопка с гзалом, переключение видимости текста
-    @IBAction func eyeButtonDidTap() {
-        if passwordTextField.isSecureTextEntry == false {
-            passwordTextField.isSecureTextEntry = true
-        } else {
-            passwordTextField.isSecureTextEntry = false
-        }
+    @objc private func eyeButtonDidTap() {
+        passwordTextField.isSecureTextEntry.toggle()
     }
 
     private func addSubviews() {
-        view.addSubview(titelLabel)
-        view.addSubview(loginLabel)
-        view.addSubview(emailLabel)
-        view.addSubview(emailTextField)
-        view.addSubview(passwordLabel)
-        view.addSubview(passwordTextField)
-        view.addSubview(faceidLabel)
+        [
+            titelLabel,
+            loginLabel,
+            emailLabel,
+            emailTextField,
+            passwordLabel,
+            passwordTextField,
+            faceidLabel
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+
+        setPwdTextFieldRevealButtton()
+    }
+
+    private func setPwdTextFieldRevealButtton() {
+        let button = UIButton(type: .custom)
+        button.setImage(
+            UIImage(systemName: "eye.fill"),
+            for: .normal
+        )
+
+        button.addTarget(
+            self,
+            action: #selector(eyeButtonDidTap),
+            for: .touchUpInside
+        )
+
+        passwordTextField.rightView = button
+        passwordTextField.rightViewMode = .always
     }
 
     private func constrainSubviews() {

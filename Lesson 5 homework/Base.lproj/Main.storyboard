@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-gd-uFF">
-                                <rect key="frame" x="342" y="463" width="52" height="31"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="eye.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="eyeButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtd-LJ-iDI"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-M9-olT">
                                 <rect key="frame" x="308.5" y="538" width="51" height="31"/>
                             </switch>
@@ -47,12 +38,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EL4-gd-uFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="342" id="46p-Hr-vXx"/>
+                            <constraint firstItem="LNi-M9-olT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="450" id="5qb-fz-ydv"/>
                             <constraint firstItem="LNi-M9-olT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="308.5" id="E6T-sP-HqJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EL4-gd-uFF" secondAttribute="trailing" constant="20" id="JXg-rW-pjy"/>
-                            <constraint firstItem="EL4-gd-uFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="375" id="Zxh-Ty-Ewp"/>
                             <constraint firstItem="X7Z-Ho-Y4s" firstAttribute="top" secondItem="LNi-M9-olT" secondAttribute="bottom" constant="98" id="a79-av-5V8"/>
-                            <constraint firstItem="LNi-M9-olT" firstAttribute="top" secondItem="EL4-gd-uFF" secondAttribute="bottom" constant="44" id="hr0-qa-0Vh"/>
                             <constraint firstItem="X7Z-Ho-Y4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lCs-M2-So9"/>
                         </constraints>
                     </view>
@@ -221,7 +209,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eye.fill" catalog="system" width="128" height="78"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
